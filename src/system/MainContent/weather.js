@@ -3,7 +3,6 @@ import './weather.css'
 import { fetchWeather } from '../fetchApi/fetchApi'
 import { listCity } from '../../data/listCity';
 
-const API_KEY = 'd8b1b55bf40247eda85162143220103';
 class Weather extends React.Component {
 
     state = {
