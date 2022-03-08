@@ -1,0 +1,1 @@
+export const listCity = ['New York', 'California', 'Paris','Tokyo']

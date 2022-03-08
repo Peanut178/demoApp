@@ -1,0 +1,180 @@
+.weather-app{
+    min-height: 100vh;
+    // background-image: url(../../images/chan-hoi-uj-w-v7OFT4-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+    .brand{
+        position: absolute;
+        top: 5%;
+        font-size:17px;
+        @media screen and (max-width: 768px) {
+            position: relative;
+           
+            
+        }
+        
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        z-index:0;
+    }
+    .container-app{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        padding: 2em 3em 6em 9em;
+        @media screen and (max-width: 768px) {
+            position: relative;
+            width: 100%;
+            top:initial;
+           flex-direction: column; 
+            
+        }
+        
+        .weather__tittle{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+            .city-time,.temp,.weather{
+                margin: 0 1em;
+            }
+            .temp{
+                    font-size:7em;
+                    margin: 0;
+                    margin-bottom:0.2em;
+            }
+            .city-time{
+                h1{
+                    margin: 0;
+                margin-bottom: 0.2em;
+                font-size: 3em;
+                }
+                
+            }
+            .weather{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    display:block;
+                    margin: 0.5em 0;
+
+                }
+            }
+            
+        }
+        .panel{
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background:rgba(110,110,110,0.25);
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.18);
+            z-index: 1;
+            padding:3em 2em;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            &::-webkit-scrollbar{
+                display: none;
+                width: 0;
+            }
+            form{
+                margin-bottom:3em;
+                .submit{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    padding:28px 33px;
+                    margin:0;
+                    border:none;
+                    outline:none;
+                    background-color:#fa6d1b;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size:1.2em;
+                    transition:0.4s;
+                
+                    &:hover{
+                        background: #fff !important;
+                        color: #000;
+                    }
+                }
+               
+                .search{
+                    background:none;
+                    border:none;
+                    border-bottom: 1px #ccc solid;
+                    padding: 0 1em 0.5em 0;
+                    width:80%;
+                    color: #fff;
+                    font-size:1.1em;
+                    &:focus{
+                        outline: none;
+                    }
+                    &::placeholder{
+                        color: #fff;
+
+                    }
+                    
+                }
+            }
+            ul{
+                padding-bottom: 1em;
+                margin : 2em 0;
+                border-bottom: 1px solid #ccc;
+                li{
+                    color: #ccc;
+                    margin:2.5em 0;
+                }
+                h4{
+                    margin: 3em 0;
+                }
+
+            }
+            .citys{
+                .city{
+                    display: block;
+                    cursor: pointer;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+            .details{
+                li{
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                position: relative;
+                width: 100%;
+                top:initial;
+                
+            }
+        }
+    }
+}
